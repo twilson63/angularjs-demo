@@ -1,0 +1,18 @@
+<div class="container" ng-controller="CountryCtrl">
+  <h1>{{foo}}</h1>
+  <input type="text" placeholder="Enter Country Name" ng-model="mylocation.country" ng-change="change()"></input>
+  <input id="country" type="hidden" value="{{mylocation.country}}"></input>
+  <select ng-model="mylocation.state" ng-options="state for state in states" ng-change="stateChanged()">
+    <option value="">--- Choose State ---</option>
+  </select>
+  <select ng-model="mylocation.city" ng-options="city for city in cities" ng-change="cityChanged()">
+    <option value="">--- Choose City ---</option>
+  </select>
+  <button ng-click="clickFoo()">Foo</button>
+
+  <br />
+  <h2>Results</h2>
+  {{mylocation.country}}
+  {{mylocation.state}}
+  {{mylocation.city}}
+</div>
